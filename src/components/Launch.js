@@ -1,14 +1,12 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles} from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
-import IconButton from "@material-ui/core/IconButton";
-
 const useStyles = makeStyles((theme) => ({
   rootUp: {
     maxWidth: 345,
@@ -22,14 +20,14 @@ const useStyles = makeStyles((theme) => ({
     height: 350,
   },
   root: {
-    display: 'flex',
+    display: "flex",
   },
   details: {
-    display: 'flex',
-    flexDirection: 'column',
+    display: "flex",
+    flexDirection: "column",
   },
   content: {
-    flex: '1 0 auto',
+    flex: "1 0 auto",
   },
   cover: {
     width: 200,
@@ -72,27 +70,22 @@ export const LaunchShoe = () => {
   const shoe = shoes[id];
   const { name, img } = shoe;
   return (
- 
-      <div>
-          <Card className={classes.root} style={{height:"250px"}}>
-      <div className={classes.details}>
-        <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5">
-            {name}
-          </Typography>
-        
-        </CardContent>
-       
-      </div>
-      <CardMedia
-        className={classes.cover}
-        image={img}
-        title="Live from space album cover"
-      />
-    </Card>
-
-      </div>
-  
+    <div>
+      <Card className={classes.root} style={{ height: "250px" }}>
+        <div className={classes.details}>
+          <CardContent className={classes.content}>
+            <Typography component="h5" variant="h5">
+              {name}
+            </Typography>
+          </CardContent>
+        </div>
+        <CardMedia
+          className={classes.cover}
+          image={img}
+          title="Live from space album cover"
+        />
+      </Card>
+    </div>
   );
 };
 const shoes = {
